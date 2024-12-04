@@ -1,4 +1,8 @@
-# Wingman App
+# Wingman
+
+## URL
+
+https://wingman-pink.vercel.app/
 
 ## Overview
 
@@ -16,8 +20,8 @@ The Wingman App is a React-based application that fetches and displays a list of
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/wingman-app.git
-   cd wingman-app
+   git clone https://github.com/jognathew/wingman.git
+   cd wingman
    ```
 
 2. Install dependencies:
@@ -30,8 +34,6 @@ The Wingman App is a React-based application that fetches and displays a list of
    ```sh
    npm start
    ```
-
-## Usage
 
 ### Components
 
