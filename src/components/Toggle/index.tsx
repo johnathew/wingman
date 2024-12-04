@@ -16,6 +16,7 @@ const Toggle: React.FC<ToggleProps> = ({ toggle, isToggled, ariaLabel }) => {
             <button
                 onClick={handleDarkMode}
                 aria-label={ariaLabel}
+                tabIndex={0}
                 className={`w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ${isToggled ? 'bg-slate-500' : 'bg-gray-300'
                     }`}
             >
