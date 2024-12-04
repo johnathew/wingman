@@ -6,7 +6,7 @@ interface ProductProps {
 
 const Product: React.FC<ProductProps> = ({ productInfo }) => {
     return (
-        <section className="dark:bg-slate-800  dark:hover:bg-slate-600 py-6 w-full bg-white md:py-16 antialiased flex flex-col justify-between items-center border  hover:bg-slate-100 group">
+        <section tabIndex={0} className="dark:bg-slate-800  dark:hover:bg-slate-600 py-6 w-full bg-white md:py-7 antialiased flex flex-col justify-between items-center border  hover:bg-slate-100 group rounded-lg">
             <div className="px-4 mx-auto 2xl:px-0 flex flex-col justify-center items-center mb-5">
                 <h1 className="dark:text-slate-50  text-sm text-center font-normal text-gray-900 sm:text-2xl my-2 group-hover:underline underline-offset-4">{productInfo.title}</h1>
                 <img src={productInfo.image} alt={productInfo.title} className="h-36 w-auto" />

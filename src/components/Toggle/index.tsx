@@ -1,9 +1,10 @@
 interface ToggleProps {
     toggle: () => void;
     isToggled: boolean
+    ariaLabel: string;
 }
 
-const Toggle: React.FC<ToggleProps> = ({ toggle, isToggled }) => {
+const Toggle: React.FC<ToggleProps> = ({ toggle, isToggled, ariaLabel }) => {
 
     const handleDarkMode = () => {
         toggle();
@@ -14,6 +15,7 @@ const Toggle: React.FC<ToggleProps> = ({ toggle, isToggled }) => {
             <span className="text-gray-600 font-thin dark:text-slate-100">{isToggled ? 'Dark' : 'Light'} mode</span>
             <button
                 onClick={handleDarkMode}
+                aria-label={ariaLabel}
                 className={`w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ${isToggled ? 'bg-slate-500' : 'bg-gray-300'
                     }`}
             >

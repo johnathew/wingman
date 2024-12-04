@@ -3,7 +3,12 @@ import { Fragment } from 'react'
 import { useState } from 'react'
 import clsx from 'clsx'
 
-function Dropdown({ onFilterChange }: { onFilterChange: (filter: string) => void }) {
+interface DropdownProps {
+    onFilterChange: (filter: string) => void
+    ariaLabel: string
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ onFilterChange, ariaLabel }) => {
 
     const [selected, setSelected] = useState('Featured')
 
@@ -21,7 +26,7 @@ function Dropdown({ onFilterChange }: { onFilterChange: (filter: string) => void
     }
 
     return (
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block text-left" aria-label={ariaLabel}>
             <MenuButton as={Fragment}>
                 {({ active }) => <button className={clsx(active && 'bg-slate-200 border-2 p-2 m-2', !active && 'bg-slate-700 text-slate-200 border-2 p-2 m-2')}>
                     Sort by: {selected}

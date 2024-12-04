@@ -34,11 +34,13 @@ function Home() {
 
     return (
         <div className="dark:bg-slate-800">
-            <div className="flex justify-between">
+            <header className="flex justify-between">
                 <h1 className="p-2 text-xl dark:text-slate-100">Wingman Products</h1>
-                <Toggle toggle={toggleTheme} isToggled={isToggled} />
-            </div>
-            <Wingman />
+                <Toggle toggle={toggleTheme} isToggled={isToggled} ariaLabel='Toggle theme' />
+            </header>
+            <main className="p-2">
+                <Wingman />
+            </main>
         </div>
     )
 }

@@ -2,7 +2,6 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Home from "./pages/Home";
 import Error from "./components/Error";
 
-// errorElement={<Error />}
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" >
         <Route index element={<Home />} errorElement={<Error />} />

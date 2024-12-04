@@ -9,7 +9,7 @@ export default function SearchBar({ onChange }: SearchBarProps) {
             aria-label='Search'
             onChange={(e) => onChange(e.target.value)}
             placeholder='Search Products'
-            className="p-2 m-2 border-2"
+            className="p-2 m-2 border-2 dark:text-slate-100 dark:bg-slate-700"
         />
     );
 }
